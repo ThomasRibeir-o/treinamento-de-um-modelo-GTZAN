@@ -10,7 +10,7 @@ class DataHandler:
         self.path = path
 
     def separate_X_y(
-        self, test_size, random_state: int = 67
+        self, test_size: float = 0.2, random_state: int = 67
     ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         X,y = get_from_csv(self.path)
         return train_test_split(
