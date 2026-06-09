@@ -4,6 +4,8 @@ def display_values(grid, X_test, y_test):
     best_model = grid.best_estimator_
     y_values = best_model.predict(X_test)
 
+    print(grid.cv_results_)
+
     best_model_index = grid.best_index_
     best_metrics = {#dicionario 
         'accuracy': grid.cv_results_['mean_test_accuracy'][best_model_index],

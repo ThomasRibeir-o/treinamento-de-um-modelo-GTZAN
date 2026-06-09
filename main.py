@@ -10,3 +10,6 @@ X_train, X_test, y_train, y_test = data_handler.separate_X_y()#test_size: float 
 model_trainer = ModelTrainer()
 grid = model_trainer.trainer(X_train, y_train)
 display_values(grid = grid, X_test = X_test, y_test = y_test)
+
+# cd .\treinamento-de-um-modelo-GTZAN\
+#python main.py
