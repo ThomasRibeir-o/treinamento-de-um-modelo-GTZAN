@@ -1,0 +1,20 @@
+# requirements.txt
+# Dependências principais para o Treinador de IA
+
+# Machine Learning e Ciência de Dados
+scikit-learn>=1.0.0
+pandas>=1.3.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+
+# Utilitários e I/O
+seaborn>=0.11.0
+
+# Observação:
+# Módulos nativos do Python (re, time, random, sys, os, typing, etc.)
+# já vêm instalados por padrão e NÃO devem ser listados aqui.
+
+#python -m venv venv
+#venv\Scripts\activate
+#pip install -r requirements.txt
+##^^se garrar -> pip instal cada 
