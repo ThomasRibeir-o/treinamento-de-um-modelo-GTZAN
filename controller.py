@@ -24,6 +24,7 @@ def trainer():
     display_values(grid = grid, X_test = X_test, y_test = y_test)
 
 
+
 def trainer_classifier(model, X_train, y_train, X_test, y_test):
     y_pred_treino = model.predict(X_train)
     y_pred_teste = model.predict(X_test)
@@ -55,6 +56,7 @@ def plot_matriz_confusao(y_val, y_predicao, class_names, dataset_name):
     plt.title(f'Matriz de Confusão - {dataset_name}', fontsize=14, fontweight='bold')
     plt.tight_layout()
     plt.show()
+
 
 def pegar_nomes_das_features(path):#retorna os nomes das features
     df= pd.read_csv(path)
@@ -110,8 +112,13 @@ def plot_features(X, y, path, model):
     plt.tight_layout()
     plt.show()
 
+# def featuresRemove(X):
+#     featuresPodi = ["spectral_centroid_mean", "spectral_banwidth_mean", "rolloff_mean", "mfcc_2mean", "mfcc5_mean", "mfcc15_var", "zero_crossing_rate_var", "mfcc8_mean", "mfcc8_var", "mfcc10_mean", "mfcc10_var"]
+#     return X.drop(columns=featuresPodi)
+
 def features():
     X,y = get_from_csv(path)
+    #spectral_centroid_mean, spectral_banwidth_mean, rolloff_mean, mfcc_2mean, mfcc5_mean, mfcc15_var, zero_crossing_rate_var, mfcc8_mean, mfcc8_var, mfcc10_mean, mfcc10_var
     plot_balanceamento(y)
     X_train, X_test, y_train, y_test = data_handler.separate_X_y()#test_size: float = 0.2, random_state: int = 67
     model_trainer = ModelTrainer()
@@ -127,4 +134,5 @@ def features():
 
 
 features()
+#trainer()
 
